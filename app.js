@@ -1,5 +1,33 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+// Creación lista de amigos
+let amigos = [];
 
+function agregarAmigo() {
+    //capturar el campo de entrada
+    let nombreAmigos = document.getElementById("amigo").value;
+    //console.log (nombreAmigos);
+    
+    //Validar que el espacio no está vacío
+    if (nombreAmigos === "") {
+        alert("Por favor, inserte un nombre");
+        return;
+    }
+    // Evitar nombres repetidos
+    let nombreMinuscula = nombreAmigos.toLowerCase();
+
+        for (let i = 0; i < amigos.length; i++) {
+        if (amigos[i].toLowerCase() === nombreMinuscula) {
+            alert("Este nombre ya fue agregado");
+            return;
+        }
+    }
+        // Incluir los nombres en la lista de amigos
+        amigos.push (nombreAmigos);
+        console.log(amigos);
+        // Limpiar el campo de entrada
+       document.getElementById("amigo").value = "";
+
+ }
+   
 
 
 
@@ -80,3 +108,4 @@ function reiniciarJuego() {
 }
 
 condicionesIniciales();
+*/

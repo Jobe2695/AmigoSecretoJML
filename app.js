@@ -43,6 +43,25 @@ function mostrarAmigos (){
     }
 }
 
+// Función para sortear amigos
+function sortearAmigo(){
+    // Lista vacía
+    if (amigos.length===0){
+        alert ("Lista de amigos vacía");
+        return;
+    } 
+
+    // Indice aleatorio 
+    let aleatorio = Math.floor(Math.random () * amigos.length);
+
+    // Obtener nombre sorteado
+    let nombreAmigo = amigos[aleatorio];
+
+    // Mostrar amigo secreto
+    document.getElementById("resultado").innerHTML = `El amigo secreto es ${nombreAmigo}`;
+}
+
+
    
 
 
